@@ -4,14 +4,14 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        checkout scm
+        git 
     }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("registry.gitlab.com/ghassencherni/ghassen-devopstt")
     }
 
     stage('Test image') {
