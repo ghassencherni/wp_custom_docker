@@ -1,4 +1,4 @@
-# This is the Dockerfile of wordpress4.8-apache, will used it as custom image ghassen-devopstt
+# This is the Dockerfile of the wordpress4.8-apache, we will used it as custom image ghassen-devopstt
 FROM php:5.6-apache
 
 # install the PHP extensions we need
