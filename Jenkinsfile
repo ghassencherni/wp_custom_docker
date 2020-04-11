@@ -17,5 +17,9 @@ node {
         docker push registry.gitlab.com/ghassencherni/ghassen-devopstt:latest
         """
         }
+        stage ('Trigger wordpress_k8s')
+
+       /* Once the new image is pulled on the Gitlab registry, we will trigger the wordpress_k8s job to deploy the cluster*/
+      build job: 'wordpress_k8s', parameters: [string(name: 'Action', value: 'Deploy Wordpress')], quietPeriod: 5
     }
 }
