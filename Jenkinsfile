@@ -6,7 +6,7 @@ node {
     
     }
     
-    stage('Build New ghassen-devopstt image') {
+    stage('Build and Push New ghassen-devopstt image') {
         withCredentials([usernamePassword(credentialsId: 'gitlab_regit', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
         sh """
         docker login -u="$USERNAME" -p="$PASSWORD" registry.gitlab.com
