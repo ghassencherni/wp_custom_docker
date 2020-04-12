@@ -11,10 +11,10 @@ node {
         sh """
         docker login -u="$USERNAME" -p="$PASSWORD" registry.gitlab.com
         echo "Building version v1.0.${env.BUILD_NUMBER}"
-        docker build -t registry.gitlab.com/ghassen.artifakt/GHASSEN-DevopsTT .
-        docker build -t registry.gitlab.com/ghassen.artifakt/GHASSEN-DevopsTT:v1.0.${env.BUILD_NUMBER} .
-        docker push registry.gitlab.com/ghassen.artifakt/GHASSEN-DevopsTT:v1.0.${env.BUILD_NUMBER}
-        docker push registry.gitlab.com/ghassen.artifakt/GHASSEN-DevopsTT:latest
+        docker build -t registry.gitlab.com/ghassen.artifakt/ghassen-devopstt .
+        docker build -t registry.gitlab.com/ghassen.artifakt/ghassen-devopstt:v1.0.${env.BUILD_NUMBER} .
+        docker push registry.gitlab.com/ghassen.artifakt/ghassen-devopstt:v1.0.${env.BUILD_NUMBER}
+        docker push registry.gitlab.com/ghassen.artifakt/ghassen-devopstt:latest
         """
         }
         stage ('Trigger wordpress_k8s')
