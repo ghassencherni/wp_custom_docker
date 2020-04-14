@@ -11,3 +11,7 @@ This Jenkins file allows to build images based on wordpress-4.8-apache ( Dockerf
 
 - Gitlab account ( user and password ) must be stored on Jenkins ( Global credential ) with the id "gitlab_registry"
 
+
+## Author Information
+
+This script  was created by [Ghassen CHARNI](https://github.com/ghassencherni/)
