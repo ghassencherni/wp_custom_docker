@@ -20,6 +20,7 @@ node {
         stage ('Trigger wordpress_k8s')
 
        /* Once the new image is pulled on the Gitlab registry, we will trigger the wordpress_k8s job to deploy the cluster*/
-      build job: 'wordpress_k8s', parameters: [string(name: 'Action', value: 'Deploy Wordpress'), , text(name: 'wordpress_image_version', value: 'v1.0.${env.BUILD_NUMBER}')], quietPeriod: 5
+     /* build job: 'wordpress_k8s', parameters: [string(name: 'Action', value: 'Deploy Wordpress'), , text(name: 'wordpress_image_version', value: 'v1.0.${env.BUILD_NUMBER}')], quietPeriod:5 */
+      build job: 'wordpress_k8s', parameters: [string(name: 'Action', value: 'Deploy Wordpress'), , text(name: 'wordpress_image_version', value: 'v1.0.' + String.valueOf(BUILD_NUMBER)')], quietPeriod:5
     }
 }
