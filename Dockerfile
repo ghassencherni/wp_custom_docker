@@ -30,7 +30,7 @@ RUN a2enmod rewrite expires
 
 VOLUME /var/www/html
 
-ENV WORDPRESS_VERSION 4.8.2
+ENV WORDPRESS_VERSION 5.0.1
 #ENV WORDPRESS_SHA1 a99115b3b6d6d7a1eb6c5617d4e8e704ed50f450
 
 RUN set -ex; \
